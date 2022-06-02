@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pagina Spiderman</title>
+	<title>Pagina Operaciones</title>
 	<link rel="stylesheet" href="main.css">
 	<link href="http://fonts.cdnfonts.com/css/austie-bost-roman-holiday-sketc" rel="stylesheet">
 	<link href="http://fonts.cdnfonts.com/css/pilsen-plakat" rel="stylesheet">
 </head>
 <body>
-<h1>Pagina de Spiderman</h1>
+<h1>Practica Operaciones</h1>
 <h3>Por Maqueda</h3>
+
+
+<form name="registro">
+<table>
+	<tr>
+		<tr><td>Numero:</td>
+		<td><input type="text" name="dato1" id="dato1"></td></tr>
+		<tr><td>Numero:</td>
+		<td><input type="text" name="dato2" id="dato2"></td></tr>
+	</tr>
+	<td>OPERACION</td>
+	<td><input type="button" name="Enviar" value="+" onclick="sumadedatos()">
+	<input type="button" name="Enviar" value="-" onclick="restadedatos()">
+	<input type="button" name="Enviar" value="*" onclick="multiplicaciondedatos()">
+	<input type="button" name="Enviar" value="/" onclick="divisiondedatos()"></td>
+</table>
+<table>
+<tr>
+	<td><b>RESULTADO</b></td>
+	<td><input type="text" name="ola" id="ola"></td>
+    </tr>
+</table>
+
+</form>
+<script type="text/javascript">
+	function sumadedatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.ola.value=d1+d2;
+	}
+	function restadedatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.ola.value=d1-d2;
+	}
+	function multiplicaciondedatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.ola.value=d1*d2;
+	}
+	function divisiondedatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.ola.value=d1/d2;
+	}
+</script>
 </body>
 </html>
